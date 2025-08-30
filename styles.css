@@ -20,7 +20,7 @@
   --radius-md: 16px;
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --header-height: 81px; /* We define the header height here */
+  --header-height: 81px;
 }
 
 /* -- RESET & BASE STYLES -- */
@@ -33,7 +33,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden; /* This fixes the dezoom bug */
+  overflow-x: hidden;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
   background-color: var(--sand-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  padding-top: var(--header-height); /* This prevents content from hiding under the fixed header */
+  padding-top: var(--header-height);
 }
 
 img {
@@ -92,7 +92,7 @@ a:hover {
 
 /* -- HEADER -- */
 .site-header {
-  position: fixed; /* THE FIX: Using 'fixed' instead of 'sticky' */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -116,7 +116,11 @@ a:hover {
   gap: 1rem;
   color: var(--blue-dark);
 }
-.brand-logo { width: 48px; height: 48px; border-radius: var(--radius-sm); }
+.brand-logo { 
+  width: 48px; 
+  height: 48px; 
+  border-radius: var(--radius-sm);
+}
 .brand-title { font-family: var(--font-title); font-weight: 700; font-size: 1.5rem; }
 .brand-tagline { font-size: 0.9rem; color: var(--text-muted); margin-top: -4px; }
 
@@ -369,15 +373,20 @@ a:hover {
   .section { padding: 3rem 0; }
   .masonry { grid-template-columns: 1fr; }
   
-  /* THIS IS THE NEW CODE */
+  /* THIS IS THE FINAL FIX FOR THE LOGO AND TAGLINE ON MOBILE */
   .brand-text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
+
   .brand-title {
-    font-size: 1.25rem; /* Slightly smaller title on mobile */
+    font-size: 1.25rem;
+    line-height: 1.1;
   }
+
   .brand-tagline {
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
+    line-height: 1.2;
   }
 }
