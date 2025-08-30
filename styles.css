@@ -119,8 +119,8 @@ a:hover {
 .brand-logo { 
   width: 48px; 
   height: 48px; 
-  border-radius: var(--radius-sm); 
-  object-fit: contain; /* THE FIX FOR THE LOGO DISTORTION */
+  border-radius: 50%; /* THE FIX FOR THE ROUNDED LOGO */
+  object-fit: contain;
 }
 .brand-title { font-family: var(--font-title); font-weight: 700; font-size: 1.5rem; }
 .brand-tagline { font-size: 0.9rem; color: var(--text-muted); margin-top: -4px; }
@@ -374,3 +374,4 @@ a:hover {
   .section { padding: 3rem 0; }
   .masonry { grid-template-columns: 1fr; }
 }
+
