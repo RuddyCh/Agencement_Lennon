@@ -393,3 +393,18 @@ a:hover {
     line-height: 1.2;
   }
 }
+
+/* ADD THIS AT THE VERY END OF THE FILE */
+@media (min-width: 769px) {
+  /* This code only applies to screens wider than 768px (tablets, desktops) */
+
+  :root {
+    /* We recalculate the header height for the new logo size */
+    --header-height: 97px; 
+  }
+
+  .brand-logo,
+  .footer-logo {
+    height: 64px; /* Increase logo height from 48px to 64px */
+  }
+}
