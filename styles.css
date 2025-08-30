@@ -32,7 +32,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden; /* ADDING THE DEFINITIVE FIX HERE */
+  overflow-x: hidden; /* THE FIX IS HERE: MOVED FROM 'body' to 'html' */
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   background-color: var(--sand-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* Keeping it here for full compatibility */
+  /* overflow-x: hidden; <-- REMOVED FROM HERE */
 }
 
 img {
@@ -94,11 +94,11 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 1rem 0;
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: saturate(180%) blur(10px);
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
 }
 
 .header-wrap {
