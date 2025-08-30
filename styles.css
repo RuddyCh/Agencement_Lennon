@@ -116,12 +116,7 @@ a:hover {
   gap: 1rem;
   color: var(--blue-dark);
 }
-.brand-logo { 
-  width: 48px; 
-  height: 48px; 
-  border-radius: 50%; /* THE FIX FOR THE ROUNDED LOGO */
-  object-fit: contain;
-}
+.brand-logo { width: 48px; height: 48px; border-radius: var(--radius-sm); }
 .brand-title { font-family: var(--font-title); font-weight: 700; font-size: 1.5rem; }
 .brand-tagline { font-size: 0.9rem; color: var(--text-muted); margin-top: -4px; }
 
@@ -373,5 +368,16 @@ a:hover {
   .cta-row { flex-direction: column; }
   .section { padding: 3rem 0; }
   .masonry { grid-template-columns: 1fr; }
+  
+  /* THIS IS THE NEW CODE */
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-title {
+    font-size: 1.25rem; /* Slightly smaller title on mobile */
+  }
+  .brand-tagline {
+    margin-top: 0; /* Remove top margin */
+  }
 }
-
