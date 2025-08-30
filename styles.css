@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden; /* ADDING THE DEFINITIVE FIX HERE */
 }
 
 body {
@@ -40,7 +41,7 @@ body {
   background-color: var(--sand-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* THIS IS THE FIX */
+  overflow-x: hidden; /* Keeping it here for full compatibility */
 }
 
 img {
