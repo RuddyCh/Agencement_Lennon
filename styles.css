@@ -40,7 +40,7 @@ body {
   background-color: var(--sand-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; /* Prevents horizontal scroll bug */
+  overflow-x: hidden; /* THIS IS THE FIX */
 }
 
 img {
