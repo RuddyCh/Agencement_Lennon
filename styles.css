@@ -20,6 +20,7 @@
   --radius-md: 16px;
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --header-height: 81px; /* We define the header height here */
 }
 
 /* -- RESET & BASE STYLES -- */
@@ -32,7 +33,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden; /* THE FIX IS HERE: MOVED FROM 'body' to 'html' */
+  overflow-x: hidden; /* This fixes the dezoom bug */
 }
 
 body {
@@ -41,7 +42,7 @@ body {
   background-color: var(--sand-light);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  /* overflow-x: hidden; <-- REMOVED FROM HERE */
+  padding-top: var(--header-height); /* This prevents content from hiding under the fixed header */
 }
 
 img {
@@ -91,8 +92,10 @@ a:hover {
 
 /* -- HEADER -- */
 .site-header {
-  position: sticky;
+  position: fixed; /* THE FIX: Using 'fixed' instead of 'sticky' */
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   padding: 1rem 0;
   background-color: rgba(255, 255, 255, 0.85);
