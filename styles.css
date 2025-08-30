@@ -3,6 +3,7 @@
   Corrections:
   - Ajout du style pour le menu mobile ouvert (.nav.open)
   - Masquage complet du lien d'évitement (.skip-link)
+  - Correction du padding horizontal dans le header
 */
 
 /* --- Fonts --- */
@@ -103,7 +104,9 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  /* La correction est ici : on gère uniquement le padding vertical */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .brand {
   display: flex;
@@ -371,7 +374,7 @@ h1, h2, h3 {
 /* --- Responsive --- */
 @media (max-width: 920px) {
   .nav {
-    display: flex; /* Changement ici */
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
     position: fixed;
