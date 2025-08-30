@@ -116,7 +116,12 @@ a:hover {
   gap: 1rem;
   color: var(--blue-dark);
 }
-.brand-logo { width: 48px; height: 48px; border-radius: var(--radius-sm); }
+.brand-logo { 
+  width: 48px; 
+  height: 48px; 
+  border-radius: var(--radius-sm); 
+  object-fit: contain; /* THE FIX FOR THE LOGO DISTORTION */
+}
 .brand-title { font-family: var(--font-title); font-weight: 700; font-size: 1.5rem; }
 .brand-tagline { font-size: 0.9rem; color: var(--text-muted); margin-top: -4px; }
 
