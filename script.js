@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => {
     nav.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.innerHTML = '☰';
+    navToggle.innerHTML = '<span class="visually-hidden">Ouvrir le menu</span>☰';
     navToggle.style.color = 'var(--text-primary)';
   };
 
   const openMenu = () => {
     nav.classList.add('open');
     navToggle.setAttribute('aria-expanded', 'true');
-    navToggle.innerHTML = '&times;';
+    navToggle.innerHTML = '<span class="visually-hidden">Fermer le menu</span>×';
     navToggle.style.color = '#fff';
   };
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Lightbox Gallery Logic ---
+  // --- Lightbox Gallery Logic (avec alt/ARIA) ---
   const galleryItems = document.querySelectorAll('.masonry a');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
@@ -43,36 +43,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.lightbox-next');
 
   if (lightbox && lightboxImg && closeBtn && prevBtn && nextBtn) {
-    const images = Array.from(galleryItems).map(item => item.href);
+    const images = Array.from(galleryItems).map(item => {
+      const img = item.querySelector('img');
+      return { src: item.href, alt: img ? img.alt || '' : '' };
+    });
+
     let currentIndex = 0;
 
-    const showImage = (index) => {
-      lightboxImg.src = images[index];
-      currentIndex = index;
+    const updateLightbox = (index) => {
+      const { src, alt } = images[index];
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
       lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      currentIndex = index;
     };
-    
+
     const closeLightbox = () => {
       lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = 'auto';
     };
 
     galleryItems.forEach((item, index) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
-        showImage(index);
+        updateLightbox(index);
       });
     });
 
     const showNextImage = () => {
       currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
+      updateLightbox(currentIndex);
     };
 
     const showPrevImage = () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
+      updateLightbox(currentIndex);
     };
 
     closeBtn.addEventListener('click', closeLightbox);
@@ -80,9 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', showPrevImage);
 
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
+      if (e.target === lightbox) closeLightbox();
     });
 
     document.addEventListener('keydown', (e) => {
@@ -97,17 +103,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Animation au défilement (Fade-in) ---
   const animatedElements = document.querySelectorAll('.fade-in');
   if (animatedElements.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
 
-    animatedElements.forEach(element => {
-      observer.observe(element);
-    });
+    animatedElements.forEach(element => observer.observe(element));
   }
 });
