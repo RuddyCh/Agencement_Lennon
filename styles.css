@@ -228,3 +228,57 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-toggle:focus-vis
     transition: transform .45s cubic-bezier(.23,1,.32,1), opacity .35s ease;
   }
 }
+
+/* === AJOUTS POUR LES PAGES LÉGALES === */
+
+/* Conteneur principal du contenu des pages légales */
+.legal-page-content {
+  padding-top: 4rem;      /* Espace au-dessus du titre */
+  padding-bottom: 4rem;   /* Espace sous le contenu */
+  max-width: 800px;       /* Largeur maximale pour une bonne lisibilité */
+}
+
+/* Titre principal (H1) */
+.legal-page-content h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--blue-dark);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Sous-titres (H2) */
+.legal-page-content h2 {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  color: var(--blue-dark);
+  margin-top: 2.5rem;      /* Espace au-dessus de chaque section */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--sand-dark); /* Ligne de séparation subtile */
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraphes et listes */
+.legal-page-content p,
+.legal-page-content li {
+  font-size: 1.1rem;
+  line-height: 1.8;      /* Interligne aéré pour le confort de lecture */
+  color: var(--text-primary);
+}
+
+/* Espacement entre les sections */
+.legal-page-content section {
+  margin-bottom: 1.5rem;
+}
+
+/* Style de la liste à puces */
+.legal-page-content ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+/* Mise en évidence du texte en gras */
+.legal-page-content strong {
+  color: var(--blue-dark);
+}
