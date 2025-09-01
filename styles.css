@@ -201,3 +201,30 @@ a:hover{opacity:.8}
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+/* === AJOUTS NON DESTRUCTIFS === */
+
+/* Hover plus lisible sur le bouton outline (héros) */
+.btn.btn-outline:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Zoom léger sur les images de la galerie */
+.tile img { transition: transform .35s ease; }
+.tile:hover img { transform: scale(1.05); }
+
+/* Anneau de focus clair pour accessibilité clavier */
+a:focus-visible, button:focus-visible, .btn:focus-visible, .nav-toggle:focus-visible {
+  outline: 3px solid rgba(15,47,115,.6);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Légère amélioration de la transition du menu mobile */
+@media (max-width: 920px){
+  .nav.open {
+    transition: transform .45s cubic-bezier(.23,1,.32,1), opacity .35s ease;
+  }
+}
