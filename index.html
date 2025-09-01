@@ -15,6 +15,9 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Preload JS for performance (ajout non destructif) -->
+  <link rel="preload" href="script.js" as="script">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Agencement Lennon | Menuiserie à Landivisiau">
   <meta property="og:description" content="Menuiserie intérieure & extérieure – La qualité par passion.">
@@ -93,7 +96,7 @@
         <div class="grid">
           <article class="card fade-in" style="transition-delay: .1s;">
             <div class="icon">
-              <!-- icône maison -->
+              <!-- icône -->
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10"/><path d="m2 10.45 10-7 10 7"/></svg>
             </div>
             <h3>Menuiserie intérieure</h3>
@@ -101,7 +104,7 @@
           </article>
           <article class="card fade-in" style="transition-delay: .2s;">
             <div class="icon">
-              <!-- icône extérieur -->
+              <!-- icône -->
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M6 8h4"/><path d="M6 18h4"/><path d="m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M14 8h4"/><path d="M14 18h4"/><path d="m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/></svg>
             </div>
             <h3>Aménagement extérieur</h3>
@@ -109,7 +112,7 @@
           </article>
           <article class="card fade-in" style="transition-delay: .3s;">
             <div class="icon">
-              <!-- icône outils -->
+              <!-- icône -->
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/><path d="m8 6 2-2"/><path d="m18 16 2-2"/><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
             </div>
             <h3>Conception & Pose</h3>
@@ -193,8 +196,8 @@
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
     <span class="lightbox-close" aria-label="Fermer">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" alt="">
     <a class="lightbox-prev" aria-label="Image précédente">&#10094;</a>
+    <img class="lightbox-content" id="lightbox-img" alt="">
     <a class="lightbox-next" aria-label="Image suivante">&#10095;</a>
   </div>
 
