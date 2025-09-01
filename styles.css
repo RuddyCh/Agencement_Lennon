@@ -247,7 +247,7 @@ a:focus-visible, button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start; /* CORRECTION : Empêche le logo de s'étirer */
+  align-items: flex-start;
 }
 .footer-logo {
   height: 48px;
@@ -349,7 +349,7 @@ a:focus-visible, button:focus-visible {
   :root { --header-height: 97px; }
   .brand-logo, .footer-logo {
     height: 64px;
-    width: auto; /* CORRECTION : Assure le respect du ratio */
+    width: auto;
   }
 }
 
