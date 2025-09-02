@@ -135,8 +135,15 @@ a:focus-visible, button:focus-visible {
 .brand-tagline { font-size: .9rem; color: var(--text-muted); }
 
 .nav { display: flex; gap: 2rem; }
-.nav a { color: var(--text-primary); font-weight: 600; font-size: 1rem; }
-.nav a:hover { color: var(--blue-brand); }
+.nav a {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color .2s ease;
+}
+.nav a:hover, .nav a.nav-active {
+  color: var(--blue-brand);
+}
 .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; z-index: 1002; color: var(--text-primary); }
 
 /* ==============================================
@@ -247,7 +254,7 @@ a:focus-visible, button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: flex-start; /* CORRECTION : Empêche le logo de s'étirer */
 }
 .footer-logo {
   height: 48px;
@@ -331,7 +338,15 @@ a:focus-visible, button:focus-visible {
     z-index: 1001;
   }
   .nav.open { transform: translateX(0); opacity: 1; visibility: visible; }
-  .nav a { color: #fff; font-size: 1.75rem; font-family: var(--font-title); }
+  .nav a {
+    color: #fff;
+    font-size: 1.75rem;
+    font-family: var(--font-title);
+    transition: color .2s ease;
+  }
+  .nav a:hover, .nav a.nav-active {
+    color: var(--sand-dark);
+  }
 }
 
 @media (max-width: 768px) {
@@ -349,7 +364,7 @@ a:focus-visible, button:focus-visible {
   :root { --header-height: 97px; }
   .brand-logo, .footer-logo {
     height: 64px;
-    width: auto;
+    width: auto; /* CORRECTION : Assure le respect du ratio */
   }
 }
 
