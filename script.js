@@ -5,6 +5,7 @@
  * 1. Le menu de navigation mobile.
  * 2. La galerie d'images interactive (lightbox).
  * 3. Les animations d'apparition au défilement.
+ * 4. La mise en évidence du lien actif dans la navigation.
  */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -131,5 +132,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
 
     animatedElements.forEach(element => observer.observe(element));
+  }
+
+  // ----------------------------------------------
+  // 4. MISE EN ÉVIDENCE DU LIEN ACTIF AU DÉFILEMENT
+  // ----------------------------------------------
+  const sections = document.querySelectorAll('main section[id]');
+  const scrollNavLinks = document.querySelectorAll('#nav a[href^="#"]');
+
+  if (sections.length > 0 && scrollNavLinks.length > 0) {
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          const activeLink = document.querySelector(`#nav a[href="#${id}"]`);
+
+          // Supprime la classe active de tous les liens
+          scrollNavLinks.forEach(link => link.classList.remove('nav-active'));
+
+          // Ajoute la classe active au lien correspondant à la section visible
+          if (activeLink) {
+            activeLink.classList.add('nav-active');
+          }
+        }
+      });
+    };
+
+    const observerOptions = {
+      // La section est considérée active lorsqu'elle entre dans une zone
+      // commençant 150px en dessous du haut de la fenêtre.
+      rootMargin: "-150px 0px -50% 0px"
+    };
+
+    const sectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => sectionObserver.observe(section));
   }
 });
