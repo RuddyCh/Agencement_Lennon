@@ -1,5 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /politique-cookies.html
+Disallow: /mentions-legales.html
 
-# Remplace example.com par ton domaine réel
-Sitemap: https://example.com/sitemap.xml
+# Bloquer les ressources inutiles pour Googlebot
+User-agent: Googlebot
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+
+Sitemap: https://www.agencementlennon.fr/sitemap.xml
