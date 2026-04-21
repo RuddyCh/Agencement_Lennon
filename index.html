@@ -3,88 +3,191 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agencement Lennon | Menuiserie à Landivisiau – La qualité par passion</title>
-  <meta name="description" content="Agencement Lennon, menuiserie intérieure & extérieure à Landivisiau : cuisines, dressings, parquets, salles de bains, terrasses et agencements sur mesure. La qualité par passion.">
+  <title>Agencement Lennon | Menuiserie sur mesure à Landivisiau – La qualité par passion</title>
+  <meta name="description" content="Agencement Lennon, menuiserie intérieure & extérieure sur mesure à Landivisiau (29). Cuisines, dressings, parquets, terrasses, bardages. Devis gratuit. La qualité par passion.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Steven Lennon — Agencement Lennon">
+  <link rel="canonical" href="https://www.agencementlennon.fr/">
 
-  <!-- Fonts -->
+  <!-- PERFORMANCE : Préchargement des ressources critiques -->
+  <!-- FIX : Preload de l'image hero évite un LCP (Largest Contentful Paint) dégradé -->
+  <link rel="preload" as="image" href="wood-bg-blue.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
 
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Preload JS for performance -->
-  <link rel="preload" href="script.js" as="script">
-
   <!-- Open Graph -->
-  <meta property="og:title" content="Agencement Lennon | Menuiserie à Landivisiau">
-  <meta property="og:description" content="Menuiserie intérieure & extérieure – La qualité par passion.">
+  <meta property="og:title" content="Agencement Lennon | Menuiserie sur mesure à Landivisiau">
+  <meta property="og:description" content="Menuiserie intérieure & extérieure sur mesure en Finistère. Cuisines, dressings, terrasses, bardages. La qualité par passion.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="wood-bg-blue.jpg">
+  <meta property="og:image" content="https://www.agencementlennon.fr/wood-bg-blue.jpg">
+  <meta property="og:url" content="https://www.agencementlennon.fr/">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="geo.region" content="FR-29">
+  <meta name="geo.placename" content="Landivisiau">
 
-  <!-- Schema.org -->
+  <!-- SEO : JSON-LD enrichi avec services, hasOfferCatalog et sameAs complet -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "@id": "https://www.agencementlennon.fr/#business",
     "name": "Agencement Lennon",
-    "description": "Menuiserie intérieure et extérieure sur mesure.",
+    "description": "Menuiserie intérieure et extérieure sur mesure à Landivisiau : cuisines, dressings, parquets, terrasses, bardages, pergolas.",
     "slogan": "La qualité par passion",
-    "image": "wood-bg-blue.jpg",
-    "url": "https://example.com",
+    "image": "https://www.agencementlennon.fr/wood-bg-blue.jpg",
+    "logo": "https://www.agencementlennon.fr/logo-lennon.png",
+    "url": "https://www.agencementlennon.fr",
     "telephone": "+33767426234",
+    "email": "contact@agencementlennon.fr",
+    "foundingDate": "2021",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Virement, Chèque, Espèces",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "11 rue des Cols-Verts",
       "addressLocality": "Landivisiau",
       "postalCode": "29400",
+      "addressRegion": "Bretagne",
       "addressCountry": "FR"
     },
-    "areaServed": ["Finistère", "Bretagne"],
-    "sameAs": ["https://www.facebook.com/AgencementLennon29"]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.5165,
+      "longitude": -4.0626
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Landivisiau"},
+      {"@type": "City", "name": "Brest"},
+      {"@type": "City", "name": "Morlaix"},
+      {"@type": "AdministrativeArea", "name": "Finistère"},
+      {"@type": "AdministrativeArea", "name": "Bretagne"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services de menuiserie sur mesure",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cuisine sur mesure",
+            "description": "Conception et pose de cuisines équipées sur mesure en Finistère"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Terrasse bois & composite",
+            "description": "Pose de terrasses bois et bois composite, résistantes au climat breton"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Bardage extérieur",
+            "description": "Bardage et habillage de façades, extensions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Dressing & rangements sur mesure",
+            "description": "Dressings, placards et bibliothèques sur mesure"
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/AgencementLennon29"
+    ]
   }
   </script>
 </head>
 <body>
+  <!-- ACCESSIBILITÉ : Skip link pour les lecteurs d'écran -->
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <header class="site-header">
     <div class="container header-wrap">
       <a href="index.html" class="brand" aria-label="Accueil - Agencement Lennon">
-        <img src="logo-lennon.png" alt="Logo Agencement Lennon" class="brand-logo">
+        <img src="logo-lennon.png" alt="Logo Agencement Lennon" class="brand-logo" width="44" height="44">
         <div class="brand-text">
           <span class="brand-title">Agencement Lennon</span>
           <span class="brand-tagline">La qualité par passion</span>
         </div>
       </a>
 
-      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="nav">
-        <span class="visually-hidden">Ouvrir le menu</span>☰
-      </button>
-
-      <nav id="nav" class="nav" aria-label="Navigation principale">
-        <a href="#services">Nos savoir-faire</a>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="#services">Savoir-faire</a>
         <a href="#realisations">Réalisations</a>
         <a href="#apropos">À propos</a>
         <a href="#contact">Contact</a>
+        <a href="tel:+33767426234" class="btn-devis-header">07 67 42 62 34</a>
       </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Ouvrir le menu">
+        <span aria-hidden="true">☰</span>
+      </button>
     </div>
   </header>
 
+  <!-- MENU MOBILE -->
+  <nav id="mobileNav" class="mobile-nav" aria-label="Navigation mobile">
+    <button id="navClose" class="nav-close" aria-label="Fermer le menu">×</button>
+    <a href="#services">Savoir-faire</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-nav-divider" aria-hidden="true"></div>
+    <a href="tel:+33767426234" class="mobile-nav-phone">07 67 42 62 34</a>
+  </nav>
+
   <main id="contenu">
+
     <!-- HERO -->
     <section class="hero" role="region" aria-label="Présentation">
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-inner fade-in">
-        <h1>Menuiserie sur mesure à Landivisiau</h1>
-        <p>Intérieur & extérieur – Donnons vie à vos projets avec précision et passion.</p>
+        <!-- FIX : aria-hidden sur le picto décoratif -->
+        <p class="hero-eyebrow"><span aria-hidden="true">📍</span> Landivisiau · Finistère · Bretagne</p>
+        <!-- COPYWRITING : H1 plus magnétique, vendeur de rêve ET de solidité -->
+        <h1>L'artisanat qui<br><em>transforme votre maison.</em></h1>
+        <p class="hero-sub">Cuisines sur mesure, terrasses, dressings, bardages — Steven Lennon conçoit et pose chaque ouvrage avec la rigueur d'un artisan passionné, du premier trait au dernier joint.</p>
         <div class="cta-row">
-          <a href="#services" class="btn">Découvrir nos savoir-faire</a>
-          <a href="#contact" class="btn btn-outline">Demander un devis</a>
+          <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+          <a href="#realisations" class="btn btn-outline">Voir nos réalisations</a>
+        </div>
+        <!-- CONVERSION : stats chiffrées avec animation counter (voir script.js) -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="4" data-suffix="+ ans">0</span>
+            <span class="hero-stat-label">d'expertise</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="100" data-suffix="%">0</span>
+            <span class="hero-stat-label">sur mesure</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">Finistère</span>
+            <span class="hero-stat-label">zone d'intervention</span>
+          </div>
         </div>
       </div>
     </section>
@@ -92,28 +195,27 @@
     <!-- SERVICES -->
     <section id="services" class="section">
       <div class="container">
-        <h2 class="section-title fade-in">Nos savoir-faire</h2>
-        <div class="grid">
-          <article class="card fade-in">
-            <div class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10"/><path d="m2 10.45 10-7 10 7"/></svg>
-            </div>
+        <h2 class="section-title fade-in">Nos <em>savoir-faire</em></h2>
+        <span class="title-ornament" aria-hidden="true"></span>
+        <div class="services-grid">
+          <!-- FIX : service-card-link transformé en vrai lien vers #contact -->
+          <article class="service-card fade-in">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10"/><path d="m2 10.45 10-7 10 7"/></svg>
             <h3>Menuiserie intérieure</h3>
-            <p>Cuisines, dressings, rangements, parquets et aménagements sur mesure pour optimiser et embellir votre espace de vie.</p>
+            <p>Cuisines équipées, dressings, bibliothèques, parquets et aménagements sur mesure. Chaque espace est pensé pour s'adapter parfaitement à votre vie — et durer des décennies.</p>
+            <a href="#contact" class="service-card-link">Demander un devis <span aria-hidden="true">→</span></a>
           </article>
-          <article class="card fade-in">
-            <div class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M6 8h4"/><path d="M6 18h4"/><path d="m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M14 8h4"/><path d="M14 18h4"/><path d="m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/></svg>
-            </div>
+          <article class="service-card fade-in">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M6 8h4"/><path d="M6 18h4"/><path d="m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/><path d="M14 8h4"/><path d="M14 18h4"/><path d="m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z"/></svg>
             <h3>Aménagement extérieur</h3>
-            <p>Terrasses bois, bardages, claustras et pergolas pour créer des extérieurs durables, chaleureux et accueillants.</p>
+            <p>Terrasses bois & composite, bardages, claustras, pergolas. Des extérieurs durables qui résistent au climat breton et mettent en valeur votre habitat.</p>
+            <a href="#contact" class="service-card-link">Demander un devis <span aria-hidden="true">→</span></a>
           </article>
-          <article class="card fade-in">
-            <div class="icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/><path d="m8 6 2-2"/><path d="m18 16 2-2"/><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
-            </div>
-            <h3>Conception & Pose</h3>
-            <p>Un accompagnement complet : conseils, conception détaillée, fabrication artisanale, pose et finitions soignées.</p>
+          <article class="service-card fade-in">
+            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"/><path d="m8 6 2-2"/><path d="m18 16 2-2"/><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
+            <h3>Conception &amp; Pose</h3>
+            <p>Un accompagnement complet de A à Z : étude personnalisée, fabrication artisanale et pose soignée par Steven Lennon en personne. Un interlocuteur unique, du début à la fin.</p>
+            <a href="#contact" class="service-card-link">Demander un devis <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
@@ -122,80 +224,241 @@
     <!-- RÉALISATIONS -->
     <section id="realisations" class="section section-alt">
       <div class="container">
-        <h2 class="section-title fade-in">Nos Réalisations</h2>
-        <p class="muted fade-in section-subtitle">Découvrez la qualité et la diversité de notre travail à travers quelques-uns de nos projets récents.</p>
-        <div class="masonry">
-          <a href="503652431_18019452425707846_7282280674950334553_n.jpeg" class="tile fade-in"><img src="503652431_18019452425707846_7282280674950334553_n.jpeg" alt="Cuisine sur mesure moderne" loading="lazy"></a>
-          <a href="515812960_18020216423707846_1120779977097922603_n.jpeg" class="tile fade-in"><img src="515812960_18020216423707846_1120779977097922603_n.jpeg" alt="Terrasse en bois composite" loading="lazy"></a>
-          <a href="476170703_18002684129707846_5241565977867309943_n.jpg" class="tile fade-in"><img src="476170703_18002684129707846_5241565977867309943_n.jpg" alt="Cuisine en bois naturel" loading="lazy"></a>
-          <a href="528993592_18024080483707846_3395556068647575978_n.jpeg" class="tile fade-in"><img src="528993592_18024080483707846_3395556068647575978_n.jpeg" alt="Extension et bardage extérieur" loading="lazy"></a>
-          <a href="483861445_659431076461442_387394949168974088_n.jpg" class="tile fade-in"><img src="483861445_659431076461442_387394949168974088_n.jpg" alt="Installation de cuisine blanche et bois" loading="lazy"></a>
-          <a href="481985365_655807123490504_6462052080342619227_n.jpg" class="tile fade-in"><img src="481985365_655807123490504_6462052080342619227_n.jpg" alt="Aménagement sous escalier" loading="lazy"></a>
+        <h2 class="section-title fade-in">Nos <em>réalisations</em></h2>
+        <span class="title-ornament" aria-hidden="true"></span>
+        <p class="section-subtitle fade-in">Chaque chantier est une signature. Voici quelques-unes de nos réalisations récentes en Finistère.</p>
+        <div class="gallery-grid">
+          <a href="503652431_18019452425707846_7282280674950334553_n.jpeg" class="gallery-item fade-in" aria-label="Voir en grand : Cuisine bicolore noir et bois">
+            <img src="503652431_18019452425707846_7282280674950334553_n.jpeg" alt="Cuisine bicolore anthracite et chêne sur mesure — Agencement Lennon, Landivisiau" loading="eager" width="800" height="600">
+            <div class="gallery-caption"><span>Cuisine bicolore anthracite &amp; chêne</span></div>
+          </a>
+          <a href="515812960_18020216423707846_1120779977097922603_n.jpeg" class="gallery-item fade-in" aria-label="Voir en grand : Terrasse composite bicolore">
+            <img src="515812960_18020216423707846_1120779977097922603_n.jpeg" alt="Terrasse bois composite bicolore vue aérienne — Agencement Lennon" loading="lazy" width="600" height="450">
+            <div class="gallery-caption"><span>Terrasse composite bicolore</span></div>
+          </a>
+          <a href="476170703_18002684129707846_5241565977867309943_n.jpg" class="gallery-item fade-in" aria-label="Voir en grand : Cuisine en chêne naturel">
+            <img src="476170703_18002684129707846_5241565977867309943_n.jpg" alt="Cuisine en chêne naturel avec hotte noire — Agencement Lennon" loading="lazy" width="600" height="450">
+            <div class="gallery-caption"><span>Cuisine chêne naturel</span></div>
+          </a>
+          <a href="528993592_18024080483707846_3395556068647575978_n.jpeg" class="gallery-item fade-in" aria-label="Voir en grand : Extension bardage anthracite">
+            <img src="528993592_18024080483707846_3395556068647575978_n.jpeg" alt="Extension de maison avec bardage anthracite et grandes baies vitrées — Agencement Lennon" loading="lazy" width="600" height="450">
+            <div class="gallery-caption"><span>Extension &amp; bardage anthracite</span></div>
+          </a>
+          <a href="483861445_659431076461442_387394949168974088_n.jpg" class="gallery-item fade-in" aria-label="Voir en grand : Cuisine blanche et bois">
+            <img src="483861445_659431076461442_387394949168974088_n.jpg" alt="Cuisine blanche avec plan de travail bois et ilot — Agencement Lennon" loading="lazy" width="600" height="450">
+            <div class="gallery-caption"><span>Cuisine blanche &amp; bois</span></div>
+          </a>
+          <a href="481985365_655807123490504_6462052080342619227_n.jpg" class="gallery-item fade-in" aria-label="Voir en grand : Aménagement sous escalier">
+            <img src="481985365_655807123490504_6462052080342619227_n.jpg" alt="Aménagement sur mesure sous escalier avec banquette et rangements — Agencement Lennon" loading="lazy" width="600" height="450">
+            <div class="gallery-caption"><span>Aménagement sous-escalier</span></div>
+          </a>
+        </div>
+        <div class="cta-center fade-in">
+          <a href="https://www.facebook.com/AgencementLennon29" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">
+            Voir tous nos projets sur Facebook
+          </a>
         </div>
       </div>
     </section>
 
     <!-- À PROPOS -->
     <section id="apropos" class="section">
-      <div class="container narrow fade-in">
-        <h2 class="section-title">La Qualité par Passion</h2>
-        <p>Fondée en 2021 par <strong>Steven Lennon</strong>, Agencement Lennon est une entreprise de menuiserie basée à Landivisiau. Nous mettons notre savoir-faire au service des particuliers et professionnels, avec des réalisations sur mesure et des finitions irréprochables.</p>
-        <ul class="list-check">
-          <li>Étude personnalisée et conseils d'expert</li>
-          <li>Fabrication artisanale et pose de qualité</li>
-          <li>Respect rigoureux des délais et du budget</li>
-        </ul>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap fade-in">
+            <img src="528993592_18024080483707846_3395556068647575978_n.jpeg"
+                 alt="Extension de maison réalisée par Agencement Lennon — bardage anthracite et baies vitrées"
+                 class="about-image-main"
+                 width="480" height="600"
+                 loading="lazy">
+            <div class="about-badge" aria-label="Fondé en 2021">
+              <span class="about-badge-year" aria-hidden="true">2021</span>
+              <span class="about-badge-label">Fondé en</span>
+            </div>
+          </div>
+          <div class="about-content fade-in">
+            <span class="about-eyebrow">Notre histoire</span>
+            <h2>La qualité<br><em>par passion</em></h2>
+            <p>Fondée en 2021 par <strong>Steven Lennon</strong>, Agencement Lennon est une entreprise de menuiserie basée à Landivisiau, au cœur du Finistère. La passion du bois et l'exigence du travail bien fait sont au cœur de chaque projet — du premier rendez-vous à la dernière finition.</p>
+            <p>Nous intervenons auprès des particuliers et des professionnels pour des réalisations entièrement sur mesure. Pas d'intermédiaire, pas de sous-traitance : vous êtes suivi par l'artisan lui-même, avec rigueur et implication personnelle à chaque étape.</p>
+            <ul class="values-list">
+              <li>Étude personnalisée et conseils d'expert à chaque projet</li>
+              <li>Fabrication artisanale et pose soignée par nos équipes</li>
+              <li>Respect rigoureux des délais et du budget convenu</li>
+              <li>Zone d'intervention : Landivisiau, Brest, Morlaix, tout le Finistère</li>
+            </ul>
+            <div style="margin-top:2rem">
+              <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section section-alt">
       <div class="container">
-        <h2 class="section-title fade-in">Contactez-nous</h2>
-        <div class="contact-grid">
-          <div class="contact-card fade-in">
-            <p><strong>Téléphone :</strong> <a href="tel:+33767426234">07 67 42 62 34</a></p>
-            <p><strong>Email :</strong> <a href="mailto:contact@agencementlennon.fr">contact@agencementlennon.fr</a></p>
-            <p><strong>Adresse :</strong> 11 rue des Cols-Verts, 29400 Landivisiau</p>
-            <p class="muted">Du lundi au vendredi – sur rendez-vous</p>
+        <h2 class="section-title fade-in">Contactez-<em>nous</em></h2>
+        <span class="title-ornament" aria-hidden="true"></span>
+        <p class="section-subtitle fade-in">Un projet en tête ? Parlons-en. Devis gratuit et sans engagement, réponse sous 48h.</p>
+        <div class="contact-wrap">
+
+          <!-- COORDONNÉES -->
+          <div class="contact-info fade-in">
+            <h3>Agencement Lennon</h3>
+            <p class="contact-info-sub">Artisan menuisier — Landivisiau</p>
+            <div class="contact-item">
+              <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div class="contact-item-text">
+                <strong>Téléphone</strong>
+                <a href="tel:+33767426234">07 67 42 62 34</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div class="contact-item-text">
+                <strong>Email</strong>
+                <a href="mailto:contact@agencementlennon.fr">contact@agencementlennon.fr</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="contact-item-text">
+                <strong>Adresse</strong>
+                <span>11 rue des Cols-Verts, 29400 Landivisiau</span>
+              </div>
+            </div>
+            <p class="contact-hours">Du lundi au vendredi · Sur rendez-vous</p>
+            <div class="cta-facebook">
+              <a href="https://www.facebook.com/AgencementLennon29" class="btn" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Suivre sur Facebook
+              </a>
+            </div>
           </div>
-          <div class="map-wrap fade-in">
-            <iframe class="map" title="Carte : Agencement Lennon, 11 rue des Cols-Verts, 29400 Landivisiau"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5285.751012811356!2d-4.062583822306529!3d48.51645117128783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481151883fcbcad7%3A0xc2a7b09a0cd35c9b!2sAgencement%20Lennon!5e0!3m2!1sfr!2sfr!4v1756772877848!5m2!1sfr!2sfr"></iframe>
+
+          <!-- FORMULAIRE DE CONTACT — NOUVEAU -->
+          <!-- CONVERSION : Un formulaire inline augmente drastiquement le taux de prise de contact -->
+          <!-- NOTE : Remplacer l'action par votre endpoint (Formspree, Netlify Forms, PHP...) -->
+          <div class="contact-form-wrap fade-in">
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+              method="POST"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="contact-name">Votre nom *</label>
+                <input type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Jean Dupont">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email">Email *</label>
+                  <input type="email" id="contact-email" name="email" autocomplete="email" required placeholder="jean@email.fr">
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Téléphone</label>
+                  <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="06 12 34 56 78">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Type de projet</label>
+                <select id="contact-subject" name="subject">
+                  <option value="">— Sélectionnez —</option>
+                  <option value="cuisine">Cuisine sur mesure</option>
+                  <option value="dressing">Dressing / Rangements</option>
+                  <option value="terrasse">Terrasse / Extérieur</option>
+                  <option value="bardage">Bardage / Extension</option>
+                  <option value="parquet">Parquet / Sol</option>
+                  <option value="autre">Autre projet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Décrivez votre projet *</label>
+                <textarea id="contact-message" name="message" rows="4" required placeholder="Ex : Je souhaite une cuisine en L de 8m², style moderne, avec ilot…"></textarea>
+              </div>
+              <div class="form-footer">
+                <p class="form-mention">* Champs obligatoires. Vos données ne sont utilisées que pour répondre à votre demande.</p>
+                <button type="submit" class="btn btn-primary form-submit">
+                  <span class="submit-text">Envoyer ma demande</span>
+                  <span class="submit-loading" aria-hidden="true" hidden>Envoi en cours…</span>
+                </button>
+              </div>
+              <div id="form-success" class="form-feedback form-success" role="alert" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Message envoyé ! Nous vous répondrons sous 48h.
+              </div>
+              <div id="form-error" class="form-feedback form-error" role="alert" hidden>
+                Une erreur s'est produite. Contactez-nous directement par téléphone.
+              </div>
+            </form>
           </div>
+
         </div>
-        <div class="cta-center fade-in">
-          <a href="https://www.facebook.com/AgencementLennon29" class="btn">Voir nos nouveautés sur Facebook</a>
+
+        <!-- CARTE EN PLEINE LARGEUR SOUS LE FORMULAIRE -->
+        <div class="map-wrap fade-in" style="margin-top:3rem">
+          <iframe class="map"
+            title="Carte : Agencement Lennon, 11 rue des Cols-Verts, 29400 Landivisiau"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5285.751012811356!2d-4.062583822306529!3d48.51645117128783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481151883fcbcad7%3A0xc2a7b09a0cd35c9b!2sAgencement%20Lennon!5e0!3m2!1sfr!2sfr!4v1756772877848!5m2!1sfr!2sfr">
+          </iframe>
         </div>
       </div>
     </section>
+
   </main>
 
+  <div class="footer-top-bar" aria-hidden="true"></div>
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="logo-lennon.png" alt="Logo Agencement Lennon" class="footer-logo">
-        <p class="muted small">© 2024 Agencement Lennon — Landivisiau</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <img src="logo-lennon.png" alt="Logo Agencement Lennon" class="footer-logo" width="44" height="44">
+          <span class="footer-brand-tagline">La qualité par passion</span>
+          <p class="footer-brand-desc">Menuiserie intérieure et extérieure sur mesure à Landivisiau, en Finistère. Artisan depuis 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <nav class="footer-nav" aria-label="Navigation secondaire">
+            <a href="#services">Nos savoir-faire</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#apropos">À propos</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Nous retrouver</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/AgencementLennon29" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook Agencement Lennon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <p style="margin-top:1.5rem;font-size:.875rem;color:rgba(255,255,255,.45);line-height:1.6">
+            11 rue des Cols-Verts<br>29400 Landivisiau<br>
+            <a href="tel:+33767426234" style="color:var(--oak-light)">07 67 42 62 34</a>
+          </p>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="Navigation secondaire">
-        <a href="#services">Savoir-faire</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="#apropos">À propos</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="footer-legal small">
-        <a href="mentions-legales.html">Mentions légales</a> · <a href="politique-cookies.html">Cookies</a>
+      <div class="footer-bottom">
+        <p>© 2025 Agencement Lennon — Landivisiau, Finistère</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-cookies.html">Politique cookies</a>
+          <a href="#" id="manageCookies">Gérer les cookies</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-    <span class="lightbox-close" aria-label="Fermer">&times;</span>
-    <a class="lightbox-prev" aria-label="Image précédente">&#10094;</a>
-    <img class="lightbox-content" id="lightbox-img" alt="">
-    <a class="lightbox-next" aria-label="Image suivante">&#10095;</a>
+  <!-- LIGHTBOX — FIX : <a> remplacés par <button> pour conformité WCAG -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Visionneuse d'images">
+    <button class="lightbox-close" aria-label="Fermer la visionneuse">×</button>
+    <button class="lightbox-prev" aria-label="Image précédente">❮</button>
+    <img class="lightbox-content" id="lightbox-img" alt="" src="">
+    <button class="lightbox-next" aria-label="Image suivante">❯</button>
   </div>
 
   <script src="script.js" defer></script>
